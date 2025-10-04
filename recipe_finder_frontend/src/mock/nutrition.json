@@ -1,0 +1,26 @@
+{
+  "extendedIngredients": [
+    { "id": 1, "name": "chicken breast", "amount": 2, "unit": "pcs", "original": "2 chicken breasts" },
+    { "id": 2, "name": "rice", "amount": 1, "unit": "cup", "original": "1 cup jasmine rice" },
+    { "id": 3, "name": "broccoli", "amount": 1, "unit": "head", "original": "1 head of broccoli" }
+  ],
+  "analyzedInstructions": [
+    {
+      "name": "",
+      "steps": [
+        { "number": 1, "step": "Cook rice according to package instructions." },
+        { "number": 2, "step": "Season and pan-sear chicken until cooked through." },
+        { "number": 3, "step": "Steam broccoli until tender-crisp and assemble bowls." }
+      ]
+    }
+  ],
+  "nutrition": {
+    "nutrients": [
+      { "name": "Calories", "amount": 640, "unit": "kcal" },
+      { "name": "Protein", "amount": 42, "unit": "g" },
+      { "name": "Fat", "amount": 18, "unit": "g" },
+      { "name": "Carbohydrates", "amount": 72, "unit": "g" },
+      { "name": "Fiber", "amount": 7, "unit": "g" }
+    ]
+  }
+}

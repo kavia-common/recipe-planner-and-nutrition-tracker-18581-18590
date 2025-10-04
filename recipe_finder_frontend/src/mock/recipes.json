@@ -1,0 +1,29 @@
+[
+  {
+    "id": 715538,
+    "title": "Chicken Rice Bowl",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop",
+    "readyInMinutes": 35,
+    "vegetarian": false,
+    "vegan": false,
+    "calories": 640
+  },
+  {
+    "id": 640941,
+    "title": "Vegan Buddha Bowl",
+    "image": "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?q=80&w=800&auto=format&fit=crop",
+    "readyInMinutes": 25,
+    "vegetarian": true,
+    "vegan": true,
+    "calories": 520
+  },
+  {
+    "id": 716429,
+    "title": "Pasta Primavera",
+    "image": "https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=800&auto=format&fit=crop",
+    "readyInMinutes": 30,
+    "vegetarian": true,
+    "vegan": false,
+    "calories": 700
+  }
+]

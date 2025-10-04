@@ -1,82 +1,40 @@
-# Lightweight React Template for KAVIA
+# Recipe Finder Frontend (Neon Cyber)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A React frontend that lets users search for recipes by ingredients, filter by dietary preferences, view nutritional information, plan meals, and visualize meal plans with Jira integration. Styled with a bold Neon Cyber theme.
 
 ## Features
-
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Search by ingredients (comma-separated)
+- Filters: diet, intolerances, cuisine, max time, calories
+- Recipe grid and detail modal (ingredients, steps, nutrition)
+- Meal planner dashboard (Mon–Sun, Breakfast/Lunch/Dinner, localStorage persistence)
+- Jira visualization placeholder with mock summary
+- API services for Spoonacular and Jira with mock mode when env vars are missing
+- Accessible modal, keyboard navigation, alt text
 
 ## Getting Started
+Install dependencies and run:
+- npm install
+- npm start
+App runs on http://localhost:3000
 
-In the project directory, you can run:
+## Environment Variables
+Create a .env file using .env.example:
+- VITE_SPOONACULAR_API_KEY=your_key
+- VITE_JIRA_BASE_URL=https://your-domain.atlassian.net
+- VITE_JIRA_EMAIL=email@example.com
+- VITE_JIRA_API_TOKEN=token
+- VITE_JIRA_PROJECT_KEY=KEY
 
-### `npm start`
+If not provided, the app runs in mock mode using data under src/mock.
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
+- src/components: Header, FilterSidebar, RecipeGrid, RecipeCard, RecipeDetailModal, MealPlanner, JiraVisualization
+- src/context: AppContext for global state
+- src/services: spoonacular.js, jira.js service layers
+- src/mock: recipes.json, nutrition.json mock data
+- src/theme.js: Neon Cyber theme tokens
+- src/utils/storage.js: localStorage helpers
 
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+- This CRA-based setup is kept minimal and framework-agnostic. Env variables are read using both REACT_APP_ and VITE_ prefixes for compatibility.
+- To enable live data, set Spoonacular key and restart `npm start`.
